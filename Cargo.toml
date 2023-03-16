@@ -1,0 +1,24 @@
+[dependencies]
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.3"
+defmt = "0.3.2"
+defmt-rtt = "0.4.0"
+embedded-hal = "0.2.7"
+microbit-v2 = "0.13.0"
+panic-halt = "0.2.0"
+
+[features]
+default = ["defmt-default"]
+
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
+
+[package]
+authors = ["Daniel Morris <daniel@honestempire.com>"]
+edition = "2021"
+name = "microbit-text-in-transit"
+version = "0.1.0"
