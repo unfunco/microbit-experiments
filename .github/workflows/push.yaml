@@ -1,0 +1,23 @@
+name: Push
+
+on:
+  push:
+    branches:
+    - main
+    paths-ignore:
+    - .editorconfig
+    - .gitignore
+    - LICENSE.md
+    - README.md
+
+jobs:
+  verify:
+    name: Verify
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Update Rust toolchains
+      run: rustup update stable && rustup default stable
+    - name: Check formatting
+      run: cargo fmt --all -- --check

@@ -20,5 +20,5 @@ defmt-error = []
 [package]
 authors = ["Daniel Morris <daniel@honestempire.com>"]
 edition = "2021"
-name = "microbit-text-in-transit"
+name = "microbit-experiments"
 version = "0.1.0"
